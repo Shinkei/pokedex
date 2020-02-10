@@ -8,9 +8,9 @@ class PokeStats extends React.Component {
   }
 
   async componentDidMount () {
-    const { match: { params: { name } } = {} } = this.props
-    const pokemon = await getPokemon(name)
-    this.setState({ pokemon })
+    const { match: { params: { name } = {} } = {}, pokemon } = this.props
+    const pokemonInfo = await getPokemon(name || pokemon)
+    this.setState({ pokemon: pokemonInfo })
   }
 
   render () {

@@ -10,4 +10,4 @@ const getPokemon = async (number) => {
   return data
 }
 
-export { getAllPokemon, getPokemon };
+export { getAllPokemon, getPokemon }

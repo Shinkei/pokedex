@@ -1,78 +1,79 @@
-import React from "react";
-import { getPokemon } from "../services/pokedex";
+import React from 'react'
+import { getPokemon } from '../services/pokedex'
 
 class PokeStats extends React.Component {
-  constructor() {
-    super();
+  constructor () {
+    super()
     this.powerEmojis = {
-      normal: "😐",
-      fighting: "🥊",
-      flying: "✈️",
-      poison: "💀",
-      ground: "🌍",
-      rock: "🗿",
-      bug: "🐞",
-      ghost: "👻",
-      steel: "🔩",
-      fire: "🔥",
-      water: "💧",
-      grass: "🍃",
-      electric: "⚡",
-      psychic: "👁️‍🗨️",
-      ice: "🌨️",
-      dragon: "🐉",
-      dark: "🌚",
-      fairy: "🧚"
-    };
-    this.state = { pokemon: {} };
+      normal: '😐',
+      fighting: '🥊',
+      flying: '✈️',
+      poison: '💀',
+      ground: '🌍',
+      rock: '🗿',
+      bug: '🐞',
+      ghost: '👻',
+      steel: '🔩',
+      fire: '🔥',
+      water: '💧',
+      grass: '🍃',
+      electric: '⚡',
+      psychic: '👁️‍🗨️',
+      ice: '🌨️',
+      dragon: '🐉',
+      dark: '🌚',
+      fairy: '🧚'
+    }
+    this.state = { pokemon: {} }
   }
 
-  async componentDidMount() {
-    const { match: { params: { name } = {} } = {}, pokemon } = this.props;
-    const pokemonInfo = await getPokemon(name || pokemon);
-    this.setState({ pokemon: pokemonInfo });
-    this.getAbilityList = this.getAbilityList.bind(this);
-    this.getTypes = this.getTypes.bind(this);
+  async componentDidMount () {
+    const { match: { params: { name } = {} } = {}, pokemon } = this.props
+    const pokemonInfo = await getPokemon(name || pokemon)
+    this.setState({ pokemon: pokemonInfo })
+    this.getAbilityList = this.getAbilityList.bind(this)
+    this.getTypes = this.getTypes.bind(this)
   }
 
-  getAbilityList(pokemon) {
-    let abilities = [];
+  getAbilityList (pokemon) {
+    const abilities = []
     if (pokemon.abilities) {
       pokemon.abilities.forEach(item => {
-        abilities.push(<div key={item.ability.name}>{item.ability.name}</div>);
-      });
+        abilities.push(<div key={item.ability.name}>{item.ability.name}</div>)
+      })
     }
-    return abilities;
+    return abilities
   }
 
-  getTypes(pokemon) {
-    let types = [];
+  getTypes (pokemon) {
+    const types = []
     if (pokemon.types) {
       pokemon.types.forEach(item => {
         types.push(
-          <div className="power-emojis" key={item.type.name}>
+          <div className='power-emojis' key={item.type.name}>
             {this.powerEmojis[item.type.name]}
           </div>
-        );
-      });
+        )
+      })
     }
-    return types;
+    return types
   }
 
-  render() {
-    const { pokemon } = this.state;
+  render () {
+    const { pokemon } = this.state
     return (
       <div>
-        <div className="nes-table-responsive">
-          <table className="nes-table is-bordered">
+        <div className='nes-table-responsive'>
+          <table className='nes-table is-bordered'>
             <tbody>
               <tr>
                 <td>Name</td>
                 <td>{pokemon.name}</td>
-                <td rowSpan="5">
+                <td rowSpan='5'>
                   <img
                     src={pokemon.sprites && pokemon.sprites.front_default}
-                  ></img>
+                    alt='pokeimage'
+                  />
                 </td>
               </tr>
               <tr>
@@ -95,8 +96,8 @@ class PokeStats extends React.Component {
           </table>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default PokeStats;
+export default PokeStats

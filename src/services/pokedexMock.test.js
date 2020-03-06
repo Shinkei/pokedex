@@ -1,7 +1,6 @@
 import { getAllPokemon } from './pokedex'
 
-describe ('pokedex', () => {
-
+describe('pokedex', () => {
   const jsonPromise = Promise.resolve({
     count: 964,
     results: new Array(20)
@@ -19,11 +18,11 @@ describe ('pokedex', () => {
     response = await getAllPokemon()
   })
 
-  it ('should fetch 20 pokemon', async () => {
+  it('should fetch 20 pokemon', async () => {
     expect(response.results).toHaveLength(20)
   })
 
-  it ('should fetch total number of pokemon', async () => {
+  it('should fetch total number of pokemon', async () => {
     console.log(response)
     expect(response.count).toBe(964)
   })

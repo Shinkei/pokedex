@@ -1,17 +1,27 @@
-import React from 'react'
-import { render } from '@testing-library/react'
-import PokeStats from './PokeStats'
+import React from "react";
+import { render } from "@testing-library/react";
+import PokeStats from "./PokeStats";
 
-describe('PokeStats', () => {
+jest.mock("../services/pokedex.js");
 
-  it('should render an image', () => {
-    const { getByRole } = render(<PokeStats pokemon='bulbasaur' />)
-    const pokemonImage = getByRole('img')
-    expect(pokemonImage).toBeInTheDocument()
-  })
+describe("PokeStats", () => {
+  it("Should render stats for Bulbasaur properly", () => {
+    const pokestats = render(<PokeStats pokemon="bulbasaur" />);
+    expect(pokestats).toMatchSnapshot();
+    const { container } = pokestats;
 
-  it('should look like always', () => {
-    const container = render(<PokeStats pokemon='bulbasaur' />)
-    expect(container).toMatchSnapshot()
-  })
-})
+    const table = container.querySelector(".nes-table");
+    const tr = table.querySelectorAll("tr");
+    const td = table.querySelectorAll("td");
+
+    expect(container).toContainElement(table);
+    expect(tr.length).toBe(5);
+    expect(td.length).toBe(11);
+
+    expect(td[0]).toHaveTextContent("Name");
+    expect(td[1]).toHaveTextContent("bulbasaur");
+
+    expect(td[3]).toHaveTextContent("Abilities");
+    expect(td[4]).toHaveTextContent(/chlorophyll/);
+  });
+});

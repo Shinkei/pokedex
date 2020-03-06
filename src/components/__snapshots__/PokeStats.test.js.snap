@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PokeStats should look like always 1`] = `
+exports[`PokeStats Should render stats for Bulbasaur properly 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>

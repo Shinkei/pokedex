@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PokeStats Should render stats for Bulbasaur properly 1`] = `
+exports[`PokeStats Should render Bulbasaur component 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -17,24 +17,36 @@ Object {
                 <td>
                   Name
                 </td>
-                <td />
+                <td>
+                  bulbasaur
+                </td>
                 <td
                   rowspan="5"
                 >
-                  <img />
+                  <img
+                    src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+                  />
                 </td>
               </tr>
               <tr>
                 <td>
                   Abilities
                 </td>
-                <td />
+                <td>
+                  <div>
+                    chlorophyll
+                  </div>
+                  <div>
+                    overgrow
+                  </div>
+                </td>
               </tr>
               <tr>
                 <td>
                   Height
                 </td>
                 <td>
+                  7
                   m
                 </td>
               </tr>
@@ -42,13 +54,25 @@ Object {
                 <td>
                   Types
                 </td>
-                <td />
+                <td>
+                  <div
+                    class="power-emojis"
+                  >
+                    💀
+                  </div>
+                  <div
+                    class="power-emojis"
+                  >
+                    🍃
+                  </div>
+                </td>
               </tr>
               <tr>
                 <td>
                   Weight
                 </td>
                 <td>
+                  69
                   kg
                 </td>
               </tr>
@@ -71,24 +95,36 @@ Object {
               <td>
                 Name
               </td>
-              <td />
+              <td>
+                bulbasaur
+              </td>
               <td
                 rowspan="5"
               >
-                <img />
+                <img
+                  src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
+                />
               </td>
             </tr>
             <tr>
               <td>
                 Abilities
               </td>
-              <td />
+              <td>
+                <div>
+                  chlorophyll
+                </div>
+                <div>
+                  overgrow
+                </div>
+              </td>
             </tr>
             <tr>
               <td>
                 Height
               </td>
               <td>
+                7
                 m
               </td>
             </tr>
@@ -96,13 +132,25 @@ Object {
               <td>
                 Types
               </td>
-              <td />
+              <td>
+                <div
+                  class="power-emojis"
+                >
+                  💀
+                </div>
+                <div
+                  class="power-emojis"
+                >
+                  🍃
+                </div>
+              </td>
             </tr>
             <tr>
               <td>
                 Weight
               </td>
               <td>
+                69
                 kg
               </td>
             </tr>

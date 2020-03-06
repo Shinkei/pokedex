@@ -18,7 +18,9 @@ Object {
                 <td>
                   Name
                 </td>
-                <td>
+                <td
+                  style="border-right-width: 0;"
+                >
                   bulbasaur
                 </td>
                 <td
@@ -26,6 +28,7 @@ Object {
                   style="border-bottom-width: 0; border-left-width: 4px;"
                 >
                   <img
+                    alt="pokeimage"
                     src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
                   />
                 </td>
@@ -98,7 +101,9 @@ Object {
               <td>
                 Name
               </td>
-              <td>
+              <td
+                style="border-right-width: 0;"
+              >
                 bulbasaur
               </td>
               <td
@@ -106,6 +111,7 @@ Object {
                 style="border-bottom-width: 0; border-left-width: 4px;"
               >
                 <img
+                  alt="pokeimage"
                   src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
                 />
               </td>

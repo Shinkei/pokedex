@@ -2,7 +2,7 @@ import React from "react";
 import { render } from "@testing-library/react";
 import PokeStats from "./PokeStats";
 
-jest.mock("../services/pokedex.js");
+jest.mock("../../services/pokedex.js");
 
 describe("PokeStats", () => {
   /**

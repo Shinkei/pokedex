@@ -21,6 +21,9 @@ describe("PokeStats", () => {
     expect(pokestats).toMatchSnapshot();
     const nameElement = getByText("bulbasaur");
     expect(nameElement).toBeInTheDocument();
+
+    const greenPowerElement = getByText("🍃");
+    expect(greenPowerElement).toBeInTheDocument();
   });
 
   /**

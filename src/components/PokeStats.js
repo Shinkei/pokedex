@@ -63,13 +63,13 @@ class PokeStats extends React.Component {
     const { pokemon } = this.state
     return (
       <div>
-        <div className='nes-table-responsive'>
+        <div className='nes-table-responsive' style={{ display: 'flex', justifyContent: 'center' }}>
           <table className='nes-table is-bordered'>
             <tbody>
               <tr>
                 <td>Name</td>
-                <td>{pokemon.name}</td>
-                <td rowSpan='5'>
+                <td style={{ borderRightWidth: 0 }}>{pokemon.name}</td>
+                <td rowSpan='5' style={{ borderBottomWidth: 0, borderLeftWidth: 4 }}>
                   <img
                     src={pokemon.sprites && pokemon.sprites.front_default}
                     alt='pokeimage'

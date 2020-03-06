@@ -8,7 +8,7 @@ class PokeHeader extends React.Component {
 
   async componentDidMount () {
     this.setState({
-      dialog: 'Pokémon for Senpai'
+      dialog: 'Pokémon List'
     })
   }
 

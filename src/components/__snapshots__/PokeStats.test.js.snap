@@ -8,6 +8,7 @@ Object {
       <div>
         <div
           class="nes-table-responsive"
+          style="display: flex; justify-content: center;"
         >
           <table
             class="nes-table is-bordered"
@@ -17,9 +18,12 @@ Object {
                 <td>
                   Name
                 </td>
-                <td />
+                <td
+                  style="border-right-width: 0;"
+                />
                 <td
                   rowspan="5"
+                  style="border-bottom-width: 0; border-left-width: 4px;"
                 >
                   <img
                     alt="pokeimage"
@@ -64,6 +68,7 @@ Object {
     <div>
       <div
         class="nes-table-responsive"
+        style="display: flex; justify-content: center;"
       >
         <table
           class="nes-table is-bordered"
@@ -73,9 +78,12 @@ Object {
               <td>
                 Name
               </td>
-              <td />
+              <td
+                style="border-right-width: 0;"
+              />
               <td
                 rowspan="5"
+                style="border-bottom-width: 0; border-left-width: 4px;"
               >
                 <img
                   alt="pokeimage"

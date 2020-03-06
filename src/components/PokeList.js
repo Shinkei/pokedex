@@ -18,7 +18,7 @@ class PokeList extends React.Component {
   render () {
     const { pokemons } = this.state
     return (
-      <div style={{ display: 'flex', flexDirection: 'column' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
         {pokemons.map((p, i) => (
           <Link to={`/pokemon/${p.name}`} key={i}>
             {p.name}

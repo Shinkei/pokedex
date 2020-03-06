@@ -5,9 +5,13 @@ import PokeStats from './PokeStats'
 describe('PokeStats', () => {
 
   it('should render an image', () => {
-    const { getByText, getByRole } = render(<PokeStats pokemon='bulbasaur' />)
+    const { getByRole } = render(<PokeStats pokemon='bulbasaur' />)
     const pokemonImage = getByRole('img')
     expect(pokemonImage).toBeInTheDocument()
-    
+  })
+
+  it('should look like always', () => {
+    const container = render(<PokeStats pokemon='bulbasaur' />)
+    expect(container).toMatchSnapshot()
   })
 })

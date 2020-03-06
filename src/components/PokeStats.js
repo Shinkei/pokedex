@@ -69,6 +69,11 @@ class PokeStats extends React.Component {
               <tr>
                 <td>Name</td>
                 <td>{pokemon.name}</td>
+                <td rowspan="5">
+                  <img
+                    src={pokemon.sprites && pokemon.sprites.front_default}
+                  ></img>
+                </td>
               </tr>
               <tr>
                 <td>Abilities</td>
@@ -89,7 +94,6 @@ class PokeStats extends React.Component {
             </tbody>
           </table>
         </div>
-        <div></div>
       </div>
     );
   }

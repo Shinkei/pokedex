@@ -4,6 +4,26 @@ import { getPokemon } from "../services/pokedex";
 class PokeStats extends React.Component {
   constructor() {
     super();
+    this.powerEmojis = {
+      normal: "😐",
+      fighting: "🥊",
+      flying: "✈️",
+      poison: "💀",
+      ground: "🌍",
+      rock: "🗿",
+      bug: "🐞",
+      ghost: "👻",
+      steel: "🔩",
+      fire: "🔥",
+      water: "💧",
+      grass: "🍃",
+      electric: "⚡",
+      psychic: "👁️‍🗨️",
+      ice: "🌨️",
+      dragon: "🐉",
+      dark: "🌚",
+      fairy: "🧚"
+    };
     this.state = { pokemon: {} };
   }
 
@@ -12,16 +32,31 @@ class PokeStats extends React.Component {
     const pokemonInfo = await getPokemon(name || pokemon);
     this.setState({ pokemon: pokemonInfo });
     this.getAbilityList = this.getAbilityList.bind(this);
+    this.getTypes = this.getTypes.bind(this);
   }
 
   getAbilityList(pokemon) {
     let abilities = [];
     if (pokemon.abilities) {
       pokemon.abilities.forEach(item => {
-        abilities.push(<li key={item.ability.name}>{item.ability.name}</li>);
+        abilities.push(<div key={item.ability.name}>{item.ability.name}</div>);
       });
     }
     return abilities;
+  }
+
+  getTypes(pokemon) {
+    let types = [];
+    if (pokemon.types) {
+      pokemon.types.forEach(item => {
+        types.push(
+          <div className="power-emojis" key={item.type.name}>
+            {this.powerEmojis[item.type.name]}
+          </div>
+        );
+      });
+    }
+    return types;
   }
 
   render() {
@@ -37,15 +72,24 @@ class PokeStats extends React.Component {
               </tr>
               <tr>
                 <td>Abilities</td>
-                <td>
-                  <ul className="nes-list is-disc">
-                    {this.getAbilityList(pokemon)}
-                  </ul>
-                </td>
+                <td>{this.getAbilityList(pokemon)}</td>
+              </tr>
+              <tr>
+                <td>Height</td>
+                <td>{pokemon.height}m</td>
+              </tr>
+              <tr>
+                <td>Types</td>
+                <td>{this.getTypes(pokemon)}</td>
+              </tr>
+              <tr>
+                <td>Weight</td>
+                <td>{pokemon.weight}kg</td>
               </tr>
             </tbody>
           </table>
         </div>
+        <div></div>
       </div>
     );
   }

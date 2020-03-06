@@ -8,6 +8,7 @@ Object {
       <div>
         <div
           class="nes-table-responsive"
+          style="display: flex; justify-content: center;"
         >
           <table
             class="nes-table is-bordered"
@@ -22,6 +23,7 @@ Object {
                 </td>
                 <td
                   rowspan="5"
+                  style="border-bottom-width: 0; border-left-width: 4px;"
                 >
                   <img
                     src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"
@@ -86,6 +88,7 @@ Object {
     <div>
       <div
         class="nes-table-responsive"
+        style="display: flex; justify-content: center;"
       >
         <table
           class="nes-table is-bordered"
@@ -100,6 +103,7 @@ Object {
               </td>
               <td
                 rowspan="5"
+                style="border-bottom-width: 0; border-left-width: 4px;"
               >
                 <img
                   src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png"

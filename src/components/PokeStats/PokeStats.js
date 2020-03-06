@@ -1,5 +1,5 @@
 import React from 'react'
-import { getPokemon } from '../services/pokedex'
+import { getPokemon } from '../../services/pokedex'
 
 class PokeStats extends React.Component {
   constructor () {

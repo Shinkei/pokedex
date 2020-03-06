@@ -1,8 +1,8 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import PokeList from './components/PokeList'
-import PokeStats from './components/PokeStats'
-import PokeHeader from './components/PokeHeader'
+import PokeList from './components/PokeList/PokeList'
+import PokeStats from './components/PokeStats/PokeStats'
+import PokeHeader from './components/PokeHeader/PokeHeader'
 import './App.css'
 
 function App () {

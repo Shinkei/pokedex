@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { getAllPokemon } from '../services/pokedex'
+import { getAllPokemon } from '../../services/pokedex'
 
 class PokeList extends React.Component {
   constructor () {

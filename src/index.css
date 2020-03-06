@@ -15,3 +15,8 @@ body {
 .power-emojis {
   font-size: 1.5rem;
 }
+
+.message-list > .message.-left {
+  display: flex;
+  justify-content: center;
+}
